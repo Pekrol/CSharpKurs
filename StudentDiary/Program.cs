@@ -11,39 +11,28 @@ namespace StudentDiary
         static void Main(string[] args)
         {
             Diary diary = new Diary();
-            //diary.AddRating(5);
-            //diary.AddRating(8.5f);
-            //diary.AddRating(4.7f);
+            diary.AddRating(5);
+            diary.AddRating(8.5f);
+            diary.AddRating(4.7f);
 
-            //float avg = diary.CalculateAverage();
-            //float max = diary.GiveMaxRating();
-            //float min = diary.GiveMinRating();
+            DiaryStatistics stats = diary.ComputeStatistics();
 
-            for (; ; )
-            {
-                Console.WriteLine("Podaj ocene: ");
-                float rating;
-                bool result = float.TryParse(Console.ReadLine(), out rating);
-                
+            Console.WriteLine("Średnia wartośc: " + stats.AverageGrade);
+            Console.WriteLine("Max wartośc: " + stats.MaxGrade);
+            Console.WriteLine("Min wartośc: " + stats.MinGrade);
 
-                if(rating == 11)
-                {
-                    break;
-                }
-                if (result == true)
-                {
-                    if(rating > 0 && rating <=10)
-                    {
-                        diary.AddRating(rating);
-                    }
-                    else Console.WriteLine("Niepoprawna liczba, podaj 1-10");
-                }
-                
-            }
-            Console.WriteLine("Srednia ocen to: " +diary.CalculateAverage());
-            Console.WriteLine("Najwyższa ocena to: " + diary.GiveMaxRating());
-            Console.WriteLine("Najniższa ocena to: " + diary.GiveMinRating());
-            Console.ReadKey();
+
+            Diary diary2 = new Diary();
+            diary2.AddRating(5);
+            diary2.AddRating(8.5f);
+            diary2.AddRating(4.7f);
+            diary2.AddRating(9.7f);
+
+            stats = diary2.ComputeStatistics();
+
+            Console.WriteLine("Średnia wartośc: " + stats.AverageGrade);
+            Console.WriteLine("Max wartośc: " + stats.MaxGrade);
+            Console.WriteLine("Min wartośc: " + stats.MinGrade);
         }
     }
 }
