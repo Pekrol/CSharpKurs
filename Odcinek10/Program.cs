@@ -10,7 +10,7 @@ namespace Odcinek10
     {
         static void Main(string[] args)
         {
-            Diary diary = new Diary();
+            Diary diary = new Diary(); //swsswswsw
             diary.AddRating(3);
             diary.AddRating(5);
 
