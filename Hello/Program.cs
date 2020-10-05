@@ -48,7 +48,7 @@ namespace Hello
             int age;
             bool result = int.TryParse(Console.ReadLine(), out age);
 
-            if (age > 18)
+            if (age >= 18)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Brawo, jesteś pełnoletni możesz wypić browca!!");
