@@ -33,6 +33,11 @@ namespace StudentDiary
             Console.WriteLine("Średnia wartośc: " + stats.AverageGrade);
             Console.WriteLine("Max wartośc: " + stats.MaxGrade);
             Console.WriteLine("Min wartośc: " + stats.MinGrade);
+
+            Diary diary3 = new Diary();
+            Diary diary4 = new Diary();
+            Diary diary5 = new Diary();
+            Console.WriteLine(Diary.Count);
         }
     }
 }
