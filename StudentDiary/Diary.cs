@@ -32,7 +32,7 @@ namespace StudentDiary
         /// <summary>
         /// Obliczanie statystyk
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Avg, max and min grade</returns>
         internal DiaryStatistics ComputeStatistics()
         {
             DiaryStatistics stats = new DiaryStatistics();
